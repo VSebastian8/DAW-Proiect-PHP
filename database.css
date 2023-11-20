@@ -1,0 +1,47 @@
+body{
+    background-color: #487F63;
+}
+select{
+    margin-left: 3vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+#table_container{
+    /* #18745C  #39505C #F8C060 */
+    background-color: #487F63; 
+    padding: 2%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+    row-gap: 10px;
+}
+table{
+    background-color: #39505C;
+    border-spacing: 5px 5px;
+    outline-style: solid;
+    outline-color: #F0B86C;
+    outline-width: 10px;
+    
+}
+td, th{
+    font-family: 'Noto Serif Balinese', sans-serif;
+    font-size: 1.5em;
+    padding: 0.2em;
+    text-align: center;
+}
+tr {
+    background-color: #F3EFE7;
+    color: #1C282E;
+}
+tr:nth-child(even) {
+    background-color: #B59289;
+}
+tr:hover {
+    background-color: #39505C;
+    color: #F3EFE7;
+}
+.tb1{
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
