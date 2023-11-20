@@ -1,4 +1,7 @@
 # DAW-Proiect-PHP
+**Website**
+https://vsebastian.alwaysdata.net/
+
 **Scurta Descriere**
 Site-ul va afisa date despre rezultatul diferitor concursuri sportive. Vor exista conturi de utilizator (autentificare prin formular) si de admin (poate adauga/sterge concursuri).
 
