@@ -1,28 +1,25 @@
 body{
-    background-color: #487F63;
+    background-color: #1A2E39;
+}
+.form-container{
+    margin-left: 3vw;
 }
 select{
-    margin-left: 3vw;
-    margin-top: 2vh;
-    margin-bottom: 5vh;
+    margin: 2vh 0 3vh 0;
 }
 #table_container{
-    /* #18745C  #39505C #F8C060 */
-    background-color: #487F63; 
-    padding: 2%;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
     column-gap: 30px;
     row-gap: 10px;
+    max-height: 35vh;
+    overflow-y: scroll;
+    margin: 0 1vw 5vh 1vw; /*top right bottom up*/
+    outline: #F0B86C solid 1vh;
 }
 table{
     background-color: #39505C;
     border-spacing: 5px 5px;
-    outline-style: solid;
-    outline-color: #F0B86C;
     outline-width: 10px;
-    
 }
 td, th{
     font-family: 'Noto Serif Balinese', sans-serif;
@@ -32,10 +29,10 @@ td, th{
 }
 tr {
     background-color: #F3EFE7;
-    color: #1C282E;
+    color: #1A2E39;
 }
 tr:nth-child(even) {
-    background-color: #B59289;
+    background-color: #91b2a1;
 }
 tr:hover {
     background-color: #39505C;
@@ -44,4 +41,25 @@ tr:hover {
 .tb1{
     grid-column: 2;
     grid-row: 1 / 3;
+}
+a{
+    color: #F0B86C;
+    font-size: medium;
+    font-family: 'Noto Serif Balinese', sans-serif;
+}
+input{
+    color: #1A2E39;
+}
+form > select, form > input{
+    margin-right: 1vw;
+}
+#navigation{
+    position: absolute;
+    top: 5vh;
+    left: 75vw;
+}
+#navigation > a{
+    font-family: 'Noto Serif Balinese', sans-serif;
+    color: #91b2a1;
+    margin-right: 8px;
 }

@@ -13,7 +13,7 @@ Site-ul va afisa date despre rezultatul diferitor concursuri sportive. Vor exist
             
 **Baza de Date**
 - USERS(id, nume, prenume, email, parola)
-- CONCURSURI(id, sport, data)
-- SPORTIVI(id, nume, prenume, nationalitate)
-- A_PARTICIPAT(id_sportiv, id_concurs, rezultat, premiu)
+- CONCURSURI(id, nume, sport, data)
+- SPORTIVI(id, nume, prenume, tara, data_nasterii)
+- A_PARTICIPAT(id_sportiv, id_concurs, loc, premiu)
 - NOTIFICARI(id_user, id_concurs)
