@@ -1,0 +1,81 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #001e28;
+  overflow: auto;
+}
+.form-container {
+  margin-left: 3vw;
+}
+#table_container {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 10px;
+  max-height: 35vh;
+  overflow-y: scroll;
+  margin: 5vh 1vw 5vh 1vw; /*top right bottom up*/
+  outline: #ff873c solid 1vh;
+}
+table {
+  background-color: #39505c;
+  border-spacing: 5px 5px;
+  outline-width: 10px;
+}
+td,
+th {
+  font-family: "Noto Serif Balinese", sans-serif;
+  font-size: 1.5em;
+  padding: 0.2em;
+  text-align: center;
+}
+tr {
+  background-color: #eaeaea;
+  color: #001e28;
+}
+tr:nth-child(even) {
+  background-color: #c0d6df;
+}
+tr:hover {
+  background-color: #39505c;
+  color: #eaeaea;
+}
+.tb1 {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+#methods {
+  background-color: #1a2e39;
+  padding: 2vh 0 2vh 2vw;
+  margin: 0 2vw 0 2vw;
+}
+a {
+  color: #ff873c;
+  display: inline-block;
+  font-size: medium;
+  font-family: "Noto Serif Balinese", sans-serif;
+  margin: 2vh 0 1vh 0;
+}
+form > select,
+form > input {
+  color: #eaeaea;
+  background-color: #001e28;
+  margin: 0 1vw 0 0;
+}
+#navigation {
+  background-color: #39505c;
+  position: absolute;
+  top: 0;
+  left: 82vw;
+  width: 18vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0 0 0 45%;
+}
+#navigation > a {
+  margin: 0;
+}

@@ -1,0 +1,119 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+#container {
+  background-color: #1a2e39;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 10vw 90vw;
+}
+#navigation_bar {
+  background-color: #001e28;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8vh 2vw 8vh 2vw;
+  gap: 5vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#account {
+  width: 40px;
+  height: 40px;
+  filter: invert(64%) sepia(46%) saturate(2623%) hue-rotate(333deg)
+    brightness(104%) contrast(102%);
+}
+#userName {
+  color: #ff873c;
+  text-align: center;
+  line-height: 1.2;
+}
+#notificari,
+#setari {
+  cursor: pointer;
+}
+#notificari-content,
+#setari-content {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #1a2e39;
+  width: 7vw;
+  margin-top: -5vh;
+  padding: 8px 2px 8px 8px;
+  gap: 2vh;
+}
+li,
+a,
+p {
+  color: #eaeaea;
+  font-size: 16px;
+  font-family: "Noto Serif Balinese", sans-serif;
+}
+li {
+  padding-top: 3px;
+}
+.highlight {
+  color: #ff0046;
+}
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+#notificari-content a,
+#setari-content a {
+  font-size: 16px;
+  height: 28.8px;
+  word-break: break-all;
+  text-align: center;
+  overflow: hidden;
+}
+#notificari-content a:hover,
+#setari-content a:hover {
+  word-break: normal;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #39505c;
+}
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff873c;
+}
+
+#blocks {
+  position: absolute;
+  top: 40vh;
+  left: 75vw;
+  background-color: #39505c;
+  width: 25vw;
+  height: 60vh;
+  border-radius: 45% 0.5% 0 0.5%;
+}
+#text_box {
+  background-color: #1a2e39;
+  grid-column: 2;
+  padding: 2vh 2vw 2vh 5vw;
+  overflow: auto;
+}
+h1 {
+  color: #c0d6df;
+  font-family: "Noto Serif Balinese", sans-serif;
+}
+h3 {
+  color: #ff873c;
+  margin-bottom: -2vh;
+  font-family: "Noto Serif Balinese", sans-serif;
+}

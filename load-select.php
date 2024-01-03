@@ -2,12 +2,8 @@
     $tabel = $_POST['table_name'];
     $action = $_POST['action'];
 
-    $link = mysqli_connect("mysql-vsebastian.alwaysdata.net", "336088", "DawBD08*", "vsebastian_dt");
-    if (!$link) {
-        echo "Error: Unable to connect to MySQL.";
-        exit;
-    }
-
+    require 'conection.php';
+    
     $query="SELECT * FROM ".$tabel;
     $tabel_data = $link->query($query);
 
