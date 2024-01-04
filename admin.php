@@ -37,17 +37,17 @@
     <div id = "methods">
     <div class = "form-container">
         <a>Delete</a>
-        <form id = 'form-delete' action = 'database.php' method = 'POST'>
+        <form id = 'form-delete' action = 'database_admin.php' method = 'POST'>
         </form>    
     </div>
     <div class = "form-container">
         <a>Modify</a>
-        <form id = 'form-modify' action = 'database.php' method = 'POST'>
+        <form id = 'form-modify' action = 'database_admin.php' method = 'POST'>
         </form>    
     </div>
     <div class = "form-container">
         <a>Insert</a>
-        <form id = "form-insert" action = 'database.php' method = 'POST'>
+        <form id = "form-insert" action = 'database_admin.php' method = 'POST'>
         </form>
     </div>
 </div>

@@ -28,7 +28,7 @@
                 echo '<div id = "notificari-content"> <a>Cupa Prieteniei</a> <a>Fly High 2024</a> <a>Alt concurs</a>';
                 echo '</div>';
                 echo '<a id = "setari"> Setari </a>';
-                echo '<div id = "setari-content"><a>Nume</a><a>Parola</a></div>';
+                echo '<div id = "setari-content"><a>Nume</a><a>Parola</a><a>Delete Account</a></div>';
             }
 
             if($_SESSION['rol'] == 'admin'){

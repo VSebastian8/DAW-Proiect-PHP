@@ -15,8 +15,7 @@
 ?>
 <?php
     $tabel = $_POST['table_name'];
-
-    require 'conection.php';
+    require 'conexiune.php';
     
     $query="SELECT * FROM ".$tabel;
     $tabel_data = $link->query($query);

@@ -1,33 +1,76 @@
 <?php
     if(!isset($_SESSION))
         require 'sesiune.php';
-    if($_POST){
-        require 'conection.php';
-        $query="SELECT * FROM USERS WHERE email = '".$_POST['lemail']."' AND parola = '".$_POST['lparola']."';";
-        $data = $link->query($query);
-        if($data->num_rows == 1){
-            $row = $data->fetch_assoc();
-            print_r($row);
-            
-            $_SESSION['username'] = $row['prenume'].' '.$row['nume'];
-            $_SESSION['email'] = $row['email'];
-            $_SESSION['userId'] = $row['id'];
-            $_SESSION['rol'] = 'admin';
-
-            mysqli_close($link);
-            header('Location: index.php');
-            exit();
-        }
-        else{
-            mysqli_close($link);
-            header('Location: login.html');
-        }
-    }
-    else{
-        $_SESSION['username'] = 'Guest';
-        $_SESSION['rol'] = 'guest';
-        unset($_SESSION['userId']);
-        unset($_SESSION['email']);
-        header('Location: login.html');
-    }
+    unset($_SESSION['username']);
+    unset($_SESSION['rol']);
+    unset($_SESSION['userId']);
+    unset($_SESSION['email']);
 ?>
+
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+    <title> Autentificare </title>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href = "https://fonts.googleapis.com/css2?family=Noto+Serif+Balinese&display=swap" rel = "stylesheet">
+    <link rel = "stylesheet" href = "login.css" type = "text/css">
+    <script type="text/javascript" src="login.js"></script>
+    <script src= 
+        "https://www.google.com/recaptcha/api.js" async defer> 
+    </script> 
+</head>
+<body>
+    <div id = "container">
+    <div id = "navigation">
+    </div>
+    <div id = 'wrapper'>
+    <div id = "form-container" class = "loginForm">
+        <div id = "login" class = "selectedForm">LOGIN</div>
+        <div id = "signup">SIGNUP</div>
+
+        <form id = "login-form" action = 'login_try.php' method = 'POST'>
+            <div class = "input-container">
+                <div class = "label-container"> <a>Email</a> </div>
+                <input type = "text" name = "lemail" pattern="[^'\x22]+" required>
+            </div>
+            <div class = "input-container">
+                <div class = "label-container"> <a>Parola</a> </div>
+                <input type = "password" name = "lparola" pattern="[^'\x22]+" required>
+            </div>
+            <div class="g-recaptcha" 
+                data-sitekey="6LdkUkUpAAAAAGDq0zj1JrLEYEzltbRWvMGLRt9t"> 
+            </div>
+            <input type = "submit" id = "button2" value = "LOGIN"/>
+            <a href = "index.php">Or login as guest</a>
+        </form>
+
+        <form id  = "signup-form" action = 'database_user.php' method = 'POST'>
+            <input type = "hidden" name = "action" value = "INSERT">
+            <div class = "input-container">
+                <div class = "label-container"> <a>Nume</a> </div>
+                <input type = "text" name = "nume" pattern="[^'\x22]+" required>
+            </div>
+            <div class = "input-container">
+                <div class = "label-container"> <a>Prenume</a> </div>
+                <input type = "text" name = "prenume" pattern="[^'\x22]+" required>
+            </div>
+            <div class = "input-container">
+                <div class = "label-container"> <a>Email</a> </div>
+                <input type = "text" name = "email" pattern="[^'\x22]+" required>
+            </div>
+            <div class = "input-container">
+                <div class = "label-container"> <a>Parola</a> </div>
+                <input type = "text" name = "parola" pattern="[^'\x22]+" required>
+            </div>
+            <div class="g-recaptcha" 
+                data-sitekey="6LdkUkUpAAAAAGDq0zj1JrLEYEzltbRWvMGLRt9t"> 
+            </div>
+            <input type = "submit" id = "button" value = "SIGN UP">
+        </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
