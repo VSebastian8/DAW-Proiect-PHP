@@ -1,16 +1,19 @@
 window.onload = function(){
     let notificari = document.getElementById('notificari');
     let setari = document.getElementById('setari');
-  
+    let notifs = document.getElementById('notificari-content');
+    let sets = document.getElementById('setari-content')
 
     notificari.onclick = function(){
-        if(document.getElementById('notificari-content').style.display == 'flex')
-            document.getElementById('notificari-content').style.display = 'none';
-        else document.getElementById('notificari-content').style.display = 'flex';
+        if(notifs.classList.contains('invisible'))
+            notifs.classList.remove('invisible');
+        else
+            notifs.classList.add('invisible');
     }
     setari.onclick = () => {
-        if(document.getElementById('setari-content').style.display == 'flex')
-            document.getElementById('setari-content').style.display = 'none';
-        else document.getElementById('setari-content').style.display = 'flex';
+        if(sets.classList.contains('invisible'))
+            sets.classList.remove('invisible');
+        else
+            sets.classList.add('invisible');
     }
 }
