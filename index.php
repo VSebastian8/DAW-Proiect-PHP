@@ -26,7 +26,8 @@
             }
             else{
                 echo '<a id = "notificari">Notificari</a>';
-                echo '<div id = "notificari-content" class = " flex invisible"> <a>Cupa Prieteniei</a> <hr> <a>Fly High 2024</a> <hr> <a>Alt concurs</a> <hr> <a>Wimbledondonner</a>';
+                echo '<div id = "notificari-content" class = " flex invisible">';
+                require 'notificari.php';
                 echo '</div>';
 
                 echo '<a id = "setari">Setari</a>';
