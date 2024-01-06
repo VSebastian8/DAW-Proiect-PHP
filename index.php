@@ -41,27 +41,13 @@
             }
         ?>
     </div>
-    <div id = "text_box">
-        <h1 id = 'res'>Home Page</h1>
-        <h3>Scurtaaaaaă descriere a siteului pentru DAW PHP</h3>
-            <p>Site-ul va afișa date despre rezultatele diferitor <a class = "highlight">concursuri sportive</a>. Vor exista conturi de <a class = "highlight">utilizator</a> (autentificare prin formular) și de <a class = "highlight">admin</a> (poate adăuga/șterge concursuri). </p>
-        <h3>Funcționalități</h3>
-            <ul>
-                <li>Se pot vizualiza concursurile după <a class = "highlight">sport</a></li>
-                <li>Se pot vizualiza cele mai <a class = "highlight">recente</a> concursuri</li>
-                <li>Utilizatorii pot salva diferite concursuri; vor fi <a class = "highlight">notificați</a> cu update-uri pentru acestea</li>
-                <li>Se poate accesa profilul unui <a class = "highlight">sportiv</a>, afișând concursurile la care a participat acesta</li>
-            </ul>
-        <h3>Baza de Date</h3>
-            <ul> 
-                <li><a class = "highlight">USERS</a> (id, nume, prenume, email, parola)</li>
-                <li><a class = "highlight">CONCURSURI</a> (id, nume, sport, data)</li>
-                <li><a class = "highlight">SPORTIVI</a> (id, nume, prenume, tara, data_nasterii)</li>
-                <li><a class = "highlight">A_PARTICIPAT</a>  (id_sportiv, id_concurs, loc, premiu)</li>
-                <li><a class = "highlight">NOTIFICARI</a> (id_user, id_concurs)</li>
-            </ul>
-    </div>
-
+    <div id = "content">
+        <h3>Lista Concursuri</h3>
+        <ul id = "conc_list">
+            <?php
+                require 'lista_concursuri.php';
+            ?>
+        </ul>
     </div>
     </div>
 </body>

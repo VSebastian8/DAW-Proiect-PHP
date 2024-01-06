@@ -3,6 +3,7 @@ window.onload = function(){
     let setari = document.getElementById('setari');
     let notifs = document.getElementById('notificari-content');
     let sets = document.getElementById('setari-content')
+    let sports = document.getElementsByClassName('sport');
 
     notificari.onclick = function(){
         if(notifs.classList.contains('invisible'))
@@ -16,4 +17,12 @@ window.onload = function(){
         else
             sets.classList.add('invisible');
     }
+    Array.from(sports).forEach(function(sport) {
+        sport.addEventListener('click', (event) => {
+            if(event.target.classList.contains('selected'))
+                event.target.classList.remove('selected');
+            else
+                event.target.classList.add('selected');
+        });
+    });
 }

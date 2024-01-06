@@ -16,7 +16,6 @@
         echo '<a>'.$row['concurs'].'</a>';
         $first = false;
     }
-
-
+    
     mysqli_close($link);
 ?>
