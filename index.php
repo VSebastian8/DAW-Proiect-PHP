@@ -26,15 +26,15 @@
             }
             else{
                 echo '<a id = "notificari">Notificari</a>';
-                echo '<div id = "notificari-content" class = " flex invisible"> <a>Cupa Prieteniei</a> <a>Fly High 2024</a> <a>Alt concurs</a> <a>Wimbledondonner</a>';
+                echo '<div id = "notificari-content" class = " flex invisible"> <a>Cupa Prieteniei</a> <hr> <a>Fly High 2024</a> <hr> <a>Alt concurs</a> <hr> <a>Wimbledondonner</a>';
                 echo '</div>';
 
                 echo '<a id = "setari">Setari</a>';
                 echo '<div id = "setari-content" class = "flex invisible">';
-                echo '<a href = "login.php">Log out</a>';
-                echo '<a>Date Cont</a><a>Serge Cont</a>';
+                echo '<a href = "login.php">Log out</a> <hr>';
+                echo '<a>Date Cont</a> <hr> <a>Serge Cont</a>';
                 if($_SESSION['rol'] == 'admin'){
-                    echo '<a href = "admin.php">Admin</a>';
+                    echo '<hr> <a href = "admin.php">Admin</a>';
                 }
                 echo '</div>';
             }

@@ -43,13 +43,15 @@ body {
   background-color: #1a2e39;
   width: 7vw;
   margin-top: -5vh;
-  padding: 8px 2px 8px 8px;
+  padding: 16px 0px 16px 0px;
   gap: 2vh;
 }
 #notificari-content a,
 #setari-content a {
   font-size: 16px;
   height: 28.8px;
+  margin-left: 8px;
+  margin-right: 2px;
   word-break: break-all;
   text-align: center;
   overflow: hidden;
@@ -59,7 +61,7 @@ body {
   word-break: break-word;
   height: auto;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   #container {
     grid-template-columns: 100vw;
     grid-template-rows: 10vh 90vh;
@@ -128,7 +130,12 @@ a:link {
   text-decoration: none;
   cursor: pointer;
 }
-
+hr {
+  width: 100%;
+  border: none;
+  border-top: 2px dashed #39505c;
+  margin-top: -2px;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -140,16 +147,6 @@ a:link {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #ff873c;
-}
-
-#blocks {
-  position: absolute;
-  top: 40vh;
-  left: 75vw;
-  background-color: #39505c;
-  width: 25vw;
-  height: 60vh;
-  border-radius: 45% 0.5% 0 0.5%;
 }
 
 h1 {
