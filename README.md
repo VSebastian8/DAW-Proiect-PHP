@@ -1,10 +1,6 @@
 # DAW-Proiect-PHP
 
-<img src="assets/baschet.svg" width="50" height="50">
-<img src="assets/fotbal.svg" width="50" height="50">
-<img src="assets/darts.svg" width="50" height="50">
-<img src="assets/volei.svg" width="50" height="50">
-<img src="assets/tenis.svg" width="50" height="50">
+<img src="assets/baschet.svg" width="50" height="50"><img src="assets/fotbal.svg" width="50" height="50"><img src="assets/darts.svg" width="50" height="50"><img src="assets/volei.svg" width="50" height="50"><img src="assets/tenis.svg" width="50" height="50">
 <br>
 
 **Website**
