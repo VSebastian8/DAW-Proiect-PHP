@@ -8,12 +8,18 @@
 
     switch($act){
         case 'INSERT':
-            $query = 'INSERT INTO USERS VALUES (NULL,"'.$_POST['nume'].'", "'.$_POST['prenume'].'", "'.$_POST['email'].'", "'. $_POST['parola'].'");';
+            $query = $link->prepare('INSERT INTO USERS VALUES (NULL, ?, ?, ?, ?)');    
+            $query->bind_param("ssss", $_POST['nume'], $_POST['prenume'], $_POST['email'], md5($_POST['parola']));
+            $query->execute();
+
             $_SESSION['username'] = $_POST['prenume'].' '.$_POST['nume'];
             $_SESSION['email'] = $_POST['email'];
             break;
         case 'DELETE':
-            $query = 'DELETE FROM USERS WHERE id = '.$_SESSION['id'].';';
+            $query = $link->prepare('DELETE FROM USERS WHERE id = ?');    
+            $query->bind_param("i", $_SESSION['id']);
+            $query->execute();
+
             $_SESSION['username'] = 'Guest';
             $_SESSION['rol'] = 'guest';
             unset($_SESSION['userId']);
@@ -26,7 +32,10 @@
     $link->query($query);
 
     if($act == 'INSERT'){
-        $id_query = 'SELECT id FROM USERS WHERE nume = "'.$_POST['nume'].'" AND prenume = "'.$_POST['prenume'].'" AND email = "'.$_POST['email'].'";';
+        $query = $link->prepare('SELECT id FROM USERS WHERE nume = ? AND prenume = ? AND email = ?');    
+        $query->bind_param("sss", $_POST['nume'], $_POST['prenume'], $_POST['email']);
+        $query->execute();
+        $data = $query->get_result();
 
         $data = $link->query($id_query);
         $row = $data->fetch_assoc();

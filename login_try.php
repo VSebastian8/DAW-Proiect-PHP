@@ -5,8 +5,11 @@
         require 'captcha.php';
         require 'conexiune.php';
 
-        $query="SELECT * FROM USERS WHERE email = '".$_POST['lemail']."' AND parola = '".$_POST['lparola']."';";
-        $data = $link->query($query);
+        $query = $link->prepare("SELECT * FROM USERS WHERE email = ? AND parola = ?");    
+        $query->bind_param("ss", $_POST['lemail'], md5($_POST['lparola']));
+        $query->execute();
+        $data = $query->get_result();
+
         if($data->num_rows == 1){
             $row = $data->fetch_assoc();
             print_r($row);
