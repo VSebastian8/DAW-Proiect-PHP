@@ -5,7 +5,7 @@
         header('Location: login.php');
     require 'conexiune.php';
 
-    $query_notificari = 'SELECT c.nume "concurs" FROM NOTIFICARI n JOIN CONCURSURI c ON (n.id_concurs = c.id) WHERE n.id_user = '.$_SESSION['userId'].';';
+    $query_notificari = 'SELECT c.nume "concurs", c.id "id" FROM NOTIFICARI n JOIN CONCURSURI c ON (n.id_concurs = c.id) WHERE n.id_user = '.$_SESSION['userId'].';';
 
     $result = $link->query($query_notificari);
     $first = true;
@@ -13,7 +13,7 @@
         if(!$first){
             echo '<hr>';
         }
-        echo '<a>'.$row['concurs'].'</a>';
+        echo '<a href = "concurs.php?id='.$row['id'].'">'.$row['concurs'].'</a>';
         $first = false;
     }
     

@@ -33,7 +33,7 @@
                 echo '<a id = "setari">Setari</a>';
                 echo '<div id = "setari-content" class = "flex invisible">';
                 echo '<a href = "login.php">Log out</a> <hr>';
-                echo '<a>Date Cont</a> <hr> <a>Serge Cont</a>';
+                echo '<a>Date Cont</a> <hr> <a href = "delete_account.html">Sterge Cont</a>';
                 if($_SESSION['rol'] == 'admin'){
                     echo '<hr> <a href = "admin/admin.php">Admin</a>';
                 }

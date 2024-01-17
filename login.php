@@ -47,7 +47,7 @@
             <a href = "index.php">Or login as guest</a>
         </form>
 
-        <form id  = "signup-form" action = 'database_user.php' method = 'POST'>
+        <form id  = "signup-form" action = 'signup.php' method = 'POST'>
             <input type = "hidden" name = "action" value = "INSERT">
             <div class = "input-container">
                 <div class = "label-container"> <a>Nume</a> </div>

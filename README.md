@@ -11,14 +11,14 @@ Parola: demo
 
 **Scurta Descriere**
 
-Site-ul afiseaza date despre `rezultatele diferitor concursuri sportive`. Exista conturi de utilizator (autentificare prin formular) si de admin (poate adauga/sterge concursuri).
+Site-ul afiseaza date despre `rezultatele diferitor concursuri sportive`. Exista conturi de `utilizator` (autentificare prin formular) de admin (poate adauga/sterge concursuri) si de `guest`(acces limitat).
 
 **Functionalitati**
 
+- Se poate crea si sterge un cont (utilizatorul primeste mesaje pe email)
+- Se poate schimba username-ul
 - Se pot vizualiza concursurile dupa sport
-- Se pot vizualiza cele mai recente concursuri
-- Utilizatorii pot salva diferite concursuri; vor fi notificati cu update-uri pentru acestea
-- Se poate accesa profilul unui sportiv, afisand concursurile la care a participat acesta
+- Utilizatorii pot salva diferite concursuri la notificari
 
 **Baza de Date**
 

@@ -1,7 +1,6 @@
 <?php
     if(!isset($_SESSION))
         require 'sesiune.php';
-    require 'captcha.php';
     require 'conexiune.php';
     $act = $_POST['action'];
     $tabel = 'USERS';
@@ -17,7 +16,7 @@
             break;
         case 'DELETE':
             $query = $link->prepare('DELETE FROM USERS WHERE id = ?');    
-            $query->bind_param("i", $_SESSION['id']);
+            $query->bind_param("i", $_SESSION['userId']);
             $query->execute();
 
             $_SESSION['username'] = 'Guest';
@@ -29,15 +28,12 @@
             break;
     }
 
-    $link->query($query);
-
     if($act == 'INSERT'){
         $query = $link->prepare('SELECT id FROM USERS WHERE nume = ? AND prenume = ? AND email = ?');    
         $query->bind_param("sss", $_POST['nume'], $_POST['prenume'], $_POST['email']);
         $query->execute();
         $data = $query->get_result();
 
-        $data = $link->query($id_query);
         $row = $data->fetch_assoc();
 
         $_SESSION['rol'] = 'user';
