@@ -141,6 +141,13 @@ li {
   display: block;
 }
 
+.sport_icon {
+  width: 35px;
+  aspect-ratio: 1;
+  margin-left: -50px;
+  margin-bottom: -30px;
+  margin-top: 10px;
+}
 .highlight {
   color: #ff0046;
 }

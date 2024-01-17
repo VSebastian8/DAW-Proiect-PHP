@@ -1,14 +1,14 @@
 <?php
     if(!isset($_SESSION))
-        require 'sesiune.php';
+        require '../sesiune.php';
 
     if($_SESSION['rol'] != 'admin'){
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
     }
 
     if(!isset($_POST)){
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
     }  
 
@@ -17,7 +17,7 @@
 
     $coloane_tabel = array("USERS" => ["id" => "num", "nume" => "char", "prenume" => "char", "email" => "char", "parola" => "char"], "CONCURSURI" => ["id" => "num", "nume" => "char", "sport" => "char", "data" => "date"], "SPORTIVI" => ["id" => "num", "nume" => "char", "prenume" => "char", "tara" => "char", "data_nasterii" => "date"], "A_PARTICIPAT" => ["id_sportiv" => "num", "id_concurs" => "num", "loc" => "num", "premiu" => "char"], "NOTIFICARI" => ["id_user" => "num", "id_concurs" => "num"]);        
 
-    require 'conexiune.php';
+    require '../conexiune.php';
     function where_statement($tabel, &$coloane_tabel){
         $coloane_select = array("USERS" => ["id", "nume", "prenume"], "CONCURSURI" => ["id", "nume", "sport"], "SPORTIVI" => ["id", "nume", "prenume"], "A_PARTICIPAT" => ["id_sportiv", "id_concurs"], "NOTIFICARI" => ["id_user", "id_concurs"]);
 

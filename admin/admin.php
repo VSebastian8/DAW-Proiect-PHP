@@ -1,10 +1,10 @@
 <?php 
     if(!isset($_SESSION))
-        require 'sesiune.php';
+        require '../sesiune.php';
     if(!isset($_SESSION['rol']))
-        header('Location: ./index.php');
+        header('Location: ../index.php');
     if($_SESSION['rol'] != 'admin')
-        header('Location: ./index.php');
+        header('Location: ../index.php');
 ?>  
 
 <html>
@@ -19,7 +19,7 @@
 </head>
 <body>
 <div id = "navigation">
-    <a href = "index.php"> BACK </a>
+    <a href = "../index.php"> BACK </a>
 </div>
 <div class = "form-container">
     <a>Tabel</a>

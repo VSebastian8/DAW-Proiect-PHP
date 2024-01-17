@@ -2,7 +2,7 @@
     $tabel = $_POST['table_name'];
     $action = $_POST['action'];
 
-    require 'conexiune.php';
+    require '../conexiune.php';
     
     $query="SELECT * FROM ".$tabel;
     $tabel_data = $link->query($query);
