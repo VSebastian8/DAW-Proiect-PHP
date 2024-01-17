@@ -4,6 +4,7 @@ window.onload = function(){
     let notifs = document.getElementById('notificari-content');
     let sets = document.getElementById('setari-content')
     let sports = document.getElementsByClassName('sport');
+    let contests = document.getElementsByClassName('concurs');
 
     notificari.onclick = function(){
         if(notifs.classList.contains('invisible'))
@@ -23,6 +24,11 @@ window.onload = function(){
                 event.target.classList.remove('selected');
             else
                 event.target.classList.add('selected');
+        });
+    });
+    Array.from(contests).forEach(function(contest){
+        contest.addEventListener('click', (event) => {
+            location.href = 'concurs.php?id='+contest.getAttribute('data_id');
         });
     });
 }

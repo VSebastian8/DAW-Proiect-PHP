@@ -21,8 +21,8 @@
 
             if($_SESSION['rol'] == 'guest'){
                 echo '<a href = "login.php"> Login </a>';
-                echo '<a></a>';
-                echo '<a></a>';
+                echo '<a id = "notificari" class = "invisible"></a>';
+                echo '<a id = "setari" class = "invisible"></a>';
             }
             else{
                 echo '<a id = "notificari">Notificari</a>';

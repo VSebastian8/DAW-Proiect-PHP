@@ -7,10 +7,10 @@
         echo '<li class = "sport">';
         echo $sport;
         echo '<ul class = "concursuri">';
-            $query_concursuri = 'SELECT nume, data FROM CONCURSURI WHERE sport = "'.$sport.'";';
+            $query_concursuri = 'SELECT id, nume, data FROM CONCURSURI WHERE sport = "'.$sport.'";';
             $result = $link->query($query_concursuri);
             foreach($result as $row){
-                echo '<li>'.$row['nume'].' | '.$sport.' | '.$row['data'].'</li>';
+                echo '<li class = "concurs" data_id = "'.$row['id'].'">'.$row['nume'].' | '.$sport.' | '.$row['data'].'</li>';
             }
             echo '</ul>';
         echo '</li>';
