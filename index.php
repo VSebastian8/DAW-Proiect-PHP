@@ -48,6 +48,11 @@
                 require 'lista_concursuri.php';
             ?>
         </ul>
+        <hr>
+        <h3>Statistici si Contact</h3>
+        <br><br>
+        <a href = "statistici.php">Cati vizitatori are acest site?</a> <br>
+        <a href = "contact.html">Formular de contact</a>
     </div>
     </div>
 </body>

@@ -16,9 +16,9 @@ Site-ul afiseaza date despre `rezultatele diferitor concursuri sportive`. Exista
 **Functionalitati**
 
 - Se poate crea si sterge un cont (utilizatorul primeste mesaje pe email)
-- Se poate schimba username-ul
 - Se pot vizualiza concursurile dupa sport
 - Utilizatorii pot salva diferite concursuri la notificari
+- Statistica pentru accesarile site-ului pe fiecare zi
 
 **Baza de Date**
 
@@ -27,3 +27,5 @@ Site-ul afiseaza date despre `rezultatele diferitor concursuri sportive`. Exista
 `SPORTIVI` (id, nume, prenume, tara, data_nasterii)  
 `A_PARTICIPAT` (id_sportiv, id_concurs, loc, premiu)  
 `NOTIFICARI` (id_user, id_concurs)
+`ADMINS` (email)
+`VISITS` (ziua, guests, users)

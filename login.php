@@ -44,7 +44,7 @@
                 data-sitekey="6LdkUkUpAAAAAGDq0zj1JrLEYEzltbRWvMGLRt9t"> 
             </div>
             <input type = "submit" id = "button2" value = "LOGIN"/>
-            <a href = "index.php">Or login as guest</a>
+            <a href = "guest.php">Or login as guest</a>
         </form>
 
         <form id  = "signup-form" action = 'signup.php' method = 'POST'>
