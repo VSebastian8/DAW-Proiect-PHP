@@ -15,9 +15,10 @@ Site-ul afiseaza date despre `rezultatele diferitor concursuri sportive`. Exista
 
 **Functionalitati**
 
-- Se poate crea si sterge un cont (utilizatorul primeste mesaje pe email)
+- Se poate crea si sterge un cont
 - Se pot vizualiza concursurile dupa sport
 - Utilizatorii pot salva diferite concursuri la notificari
+- Formular de contact
 - Statistica pentru accesarile site-ului pe fiecare zi
 
 **Baza de Date**

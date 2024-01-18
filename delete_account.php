@@ -42,8 +42,10 @@
         echo $e->errorMessage(); //error from PHPMailer
         echo '<a href = "index.php">Ceva nu a mers</a>';
     }
-
   require_once 'database_user.php';
+ 
+  session_unset();
+  session_destroy();
   header('Location: index.php');
   exit;
 ?>
