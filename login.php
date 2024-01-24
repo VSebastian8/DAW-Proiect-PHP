@@ -18,6 +18,7 @@
     <link href = "https://fonts.googleapis.com/css2?family=Noto+Serif+Balinese&display=swap" rel = "stylesheet">
     <link rel = "stylesheet" href = "login.css" type = "text/css">
     <script type="text/javascript" src="login.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/fotbal.svg">
     <script src= 
         "https://www.google.com/recaptcha/api.js" async defer> 
     </script> 
@@ -63,7 +64,7 @@
             </div>
             <div class = "input-container">
                 <div class = "label-container"> <a>Parola</a> </div>
-                <input type = "text" name = "parola" pattern="[^'\x22]+" required>
+                <input type = "password" name = "parola" pattern="[^'\x22]+" required>
             </div>
             <div class="g-recaptcha" 
                 data-sitekey="6LdkUkUpAAAAAGDq0zj1JrLEYEzltbRWvMGLRt9t"> 

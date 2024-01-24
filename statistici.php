@@ -1,14 +1,19 @@
 <html>
   <head>
     <title>Statistici</title>
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel = "stylesheet" href = "contact.css" type = "text/css">
-	
-</head>
+    <link rel="icon" type="image/x-icon" href="assets/darts.svg">
+  </head>
 <body>
-<a href = "index.php">Inapoi</a>
-<hr>
-<h3>Vizitatorii Acestui Site</h3>
+<div id="central">
+<div id="navbar"></div>
+<div class="content">
+  <a href = "index.php">Inapoi</a>
+  <hr>
+  <h3>Vizitatorii Acestui Site</h3>
   <?php
     require 'jpgraph/src/jpgraph.php';
     require 'jpgraph/src/jpgraph_pie.php';
@@ -54,7 +59,7 @@
      
         $graph->Stroke($fimg);
         
-        if(file_exists($fimg)) echo '<img width="1000" src="'. $fimg .'" />';
+        if(file_exists($fimg)) echo '<img id="graph" src="'. $fimg .'" />';
         else echo 'Unable to create: '. $fimg;
      }
 
@@ -73,5 +78,7 @@
     get_Bar($zile, $users, $guests);
 
   ?>
+</div>
+</div>
 </body>
 </html>

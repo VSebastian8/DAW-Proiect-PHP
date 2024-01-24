@@ -1,9 +1,5 @@
 <?php
-    $servername = "mysql-vsebastian.alwaysdata.net";
-    $username = "336088";
-    $password = "DawBD08*";
-    $dbname = "vsebastian_dt";
-
+    require_once '.gitignore/secret_conexiune.php';
     $link = new mysqli($servername, $username, $password, $dbname);
     
     if ($link->connect_error) {

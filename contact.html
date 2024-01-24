@@ -1,28 +1,33 @@
 <html>
   <head>
     <title>Formular contact</title>
+	<meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel = "stylesheet" href = "contact.css" type = "text/css">
-	
+    <link rel="icon" type="image/x-icon" href="assets/tenis.svg">
   </head>
   <body>
 <div id="central">
-	<div class="content">
-		<a href = "index.php">Inapoi</a>
-		<hr>
-		<h3>Formular de contact</h3>
-		<div id="message">
-<form action="contact.php" method="post">
-    <div class="label">Te rugam sa ne lasi un mesaj:</div>
+<div id="navbar"></div>
+<div id="spacing"></div>
+<div class="content">
+	<a href = "index.php">Inapoi</a>
+	<hr>
+	<h3>Formular de contact</h3>
+
+	<div id="message">
+	<form action="contact.php" method="post">
+    		<div class="label">Te rugam sa ne lasi un mesaj:</div>
 			<div class="field">			
 				<textarea id="comment-content" name="content"></textarea>			
 			</div>
-    
+
     <div class="g-recaptcha" data-sitekey="6LdkUkUpAAAAAGDq0zj1JrLEYEzltbRWvMGLRt9t"></div>
 	<input type="submit" name="submit" value="SUBMIT" >
-</form>
-		</div>		
-	</div>
+	</form>
+	</div>		
+</div>
 </div>
 </body>
 </html>

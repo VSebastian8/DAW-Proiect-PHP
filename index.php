@@ -6,6 +6,7 @@
     <link href = "https://fonts.googleapis.com/css2?family=Noto+Serif+Balinese&display=swap" rel = "stylesheet">
     <link rel = "stylesheet" href = "home.css" type = "text/css">
     <script type="text/javascript" src="home.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/volei.svg">
 </head>
 <body>
     <div id = "container">

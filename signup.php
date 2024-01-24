@@ -4,8 +4,9 @@
         exit;
     }
     require 'captcha.php';
-
     require_once('./phpmailer/class.phpmailer.php');
+    require_once '.gitignore/secret_mail.php';
+
     $mail = new PHPMailer(true); 
     $mailBody = "Contul a fost creat cu succes.\nBine ai venit!\nhttps://vsebastian.alwaysdata.net/\n";
     $mail->IsSMTP();
@@ -14,12 +15,12 @@
       $mail->SMTPAuth   = true;
       $mail->SMTPSecure = 'tls';
       $mail->Port = 587;
-      $mail->Host = "smtp.gmail.com";      
+      $mail->Host = "smtp.gmail.com";
+      $mail->Username   = $site_email;
+      $mail->Password   = $site_password;
       $mail->AddReplyTo('no-reply@example.com');
-      $mail->Username   = "medalspace.dawphp@gmail.com";
-      $mail->Password   = "adqylpmqxayfixmy";
       $mail->AddAddress($user_mail);
-      $mail->SetFrom("medalspace.dawphp@gmail.com");
+      $mail->SetFrom($site_email);
       $mail->Subject = 'Cont Creat';
       
       $mail->MsgHTML($mailBody);   

@@ -12,6 +12,7 @@ if(isset($_POST['submit'])){
     $message = $_POST['content'];
     
     require_once('./phpmailer/class.phpmailer.php');
+    require_once '.gitignore/secret_mail.php';
 
     $mailBody = "User Name: " . $name . "\n";
     $mailBody .= "User Email: " . $email . "\n";
@@ -24,15 +25,15 @@ if(isset($_POST['submit'])){
         $mail->SMTPDebug  = 3;                     
         $mail->SMTPAuth   = true; 
 
-        $toEmail='medalspace.dawphp@gmail.com';
-        $nume='DAW Project';
+        $toEmail = $site_email;
+        $nume = 'DAW Project';
 
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587; 
 
         $mail->Host       = "smtp.gmail.com";
-        $mail->Username   = "medalspace.dawphp@gmail.com";
-        $mail->Password   = "adqylpmqxayfixmy"; 
+        $mail->Username   = $site_email;
+        $mail->Password   =  $site_password; 
         $mail->AddReplyTo($email, 'DAW - project');
         $mail->AddAddress($toEmail, $nume);
     

@@ -16,6 +16,7 @@
     <link rel = "stylesheet" href = "admin.css" type="text/css">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script type="text/javascript" src="admin.js"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/fotbal.svg">
 </head>
 <body>
 <div id = "navigation">

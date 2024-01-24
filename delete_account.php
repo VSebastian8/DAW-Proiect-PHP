@@ -20,6 +20,8 @@
   }
 
   require_once('./phpmailer/class.phpmailer.php');
+  require_once '.gitignore/secret_mail.php';
+
   $mail = new PHPMailer(true); 
   $mailBody = "Contul [".$_SESSION['username']."] a fost sters cu succe.\n";
   $mail->IsSMTP();
@@ -29,10 +31,10 @@
     $mail->Port = 587;
     $mail->Host = "smtp.gmail.com";      
     $mail->AddReplyTo('no-reply@example.com');
-    $mail->Username   = "medalspace.dawphp@gmail.com";
-    $mail->Password   = "adqylpmqxayfixmy";
+    $mail->Username   = $site_email;
+    $mail->Password   = $site_password;
     $mail->AddAddress($user_mail);
-    $mail->SetFrom("medalspace.dawphp@gmail.com");
+    $mail->SetFrom($site_email);
     $mail->Subject = 'Cont Sters';
     
     $mail->MsgHTML($mailBody);   
